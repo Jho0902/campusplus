@@ -26,6 +26,14 @@ public class User implements UserDetails {
     private String password;
     private UserRoles role;
 
+    public User(String login, String password, UserRoles role){
+
+        this.login = login;
+        this.password = password;
+        this.role = role;
+
+    }
+
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         String roleName = "ROLE_" + this.role.name(); // Ex: ADMIN → ROLE_ADMIN
