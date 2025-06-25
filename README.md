@@ -95,13 +95,3 @@ O código-fonte do sistema está organizado segundo a arquitetura MVC com utiliz
 - `User` + `UserRoles` → modelagem do controle de acesso
 - `TokenService` e `SecurityFilter` → autenticação e autorização via JWT
 
----
-
-### 🧠 Derivação do Código a partir dos Modelos
-
-O desenvolvimento do sistema seguiu uma abordagem orientada a modelos:
-
-- O **modelo de classes** norteou a criação das entidades JPA (`User`, `Faq`, `Mural`) e suas propriedades persistentes.
-- As **operações dos controladores REST** derivam diretamente dos **casos de uso**, respeitando os verbos HTTP (GET, POST).
-- A **segurança** foi mapeada com base no atributo `UserRoles` do modelo conceitual, refletido na configuração do Spring Security.
-- As **relações de associação** no diagrama foram refletidas nos relacionamentos entre entidades (`@ManyToOne`, `@OneToMany`).
