@@ -52,3 +52,63 @@ campusplus-main/
 - `POST /auth/login` – autenticação
 - `GET /mural` – lista de avisos
 - `GET /faq` – perguntas frequentes
+
+## 👨‍💻 Autor
+
+[Jhonatan Martins](https://github.com/jhonatan-martinsc)
+
+## 📄 Licença
+
+Este projeto está licenciado sob a [MIT License](LICENSE).
+
+
+---
+
+## 📦 Entrega Acadêmica
+
+### ✅ Casos de Uso Envolvidos
+
+A aplicação implementa funcionalidades associadas aos seguintes casos de uso do sistema acadêmico:
+
+- **UC12 – Realizar Login**  
+- **UC11 – Gerenciar Usuários**  
+- **UC10 – Consultar FAQ**  
+- **UC08 – Visualizar Mural**
+
+---
+
+### 🧩 Recorte do Modelo de Classes
+
+https://i.imgur.com/jX3Yb0r.png
+
+### 📜 Diagramas de Sequência
+
+Os diagramas de sequência estão descritos no documento **"Diagrama de Sequência.docx"**, com destaque para:
+
+- **UC04 – Acessar Conteúdos das Disciplinas**
+- **UC07 – Gerenciar Cursos e Disciplinas**
+
+Embora não diretamente implementados, esses exemplos orientaram o estilo arquitetural e a organização das chamadas entre controladores, serviços e entidades no projeto.
+
+---
+
+### 💻 Código-Fonte Comentado
+
+O código-fonte do sistema está organizado segundo a arquitetura MVC com utilização de Spring Boot. Os principais trechos relacionados aos casos de uso estão comentados nas seguintes classes:
+
+- `AuthenticationController` → login e registro (`UC12`, `UC11`)
+- `FaqController` → listagem de FAQs (`UC10`)
+- `MuralController` → exibição e criação de avisos (`UC08`)
+- `User` + `UserRoles` → modelagem do controle de acesso
+- `TokenService` e `SecurityFilter` → autenticação e autorização via JWT
+
+---
+
+### 🧠 Derivação do Código a partir dos Modelos
+
+O desenvolvimento do sistema seguiu uma abordagem orientada a modelos:
+
+- O **modelo de classes** norteou a criação das entidades JPA (`User`, `Faq`, `Mural`) e suas propriedades persistentes.
+- As **operações dos controladores REST** derivam diretamente dos **casos de uso**, respeitando os verbos HTTP (GET, POST).
+- A **segurança** foi mapeada com base no atributo `UserRoles` do modelo conceitual, refletido na configuração do Spring Security.
+- As **relações de associação** no diagrama foram refletidas nos relacionamentos entre entidades (`@ManyToOne`, `@OneToMany`).
