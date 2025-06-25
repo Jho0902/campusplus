@@ -79,7 +79,7 @@ A aplicação implementa funcionalidades associadas aos seguintes casos de uso d
 
 ### 🧩 Recorte do Modelo de Classes
 
-https://i.imgur.com/jX3Yb0r.png
+![Recorte do Modelo de Classes](https://i.imgur.com/jX3Yb0r.png)
 
 ### 📜 Diagramas de Sequência
 
