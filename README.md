@@ -53,13 +53,6 @@ campusplus-main/
 - `GET /mural` – lista de avisos
 - `GET /faq` – perguntas frequentes
 
-## 👨‍💻 Autor
-
-[Jhonatan Martins](https://github.com/jhonatan-martinsc)
-
-## 📄 Licença
-
-Este projeto está licenciado sob a [MIT License](LICENSE).
 
 
 ---
